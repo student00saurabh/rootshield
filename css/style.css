@@ -129,3 +129,161 @@ footer a:hover {
     width: auto;  /* Maintain aspect ratio */
      background: transparent;
 }
+
+/* Icon Circle Classes */
+.icon-circle-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-circle-medium {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Floating Contact Buttons Container */
+.floating-contact-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 12px;
+    z-index: 1050;
+}
+
+.floating-contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Section Icon Variants */
+.section-icon-green {
+    background-color: #4CAF50;
+}
+
+.section-icon-orange {
+    background-color: #FF6B35;
+}
+
+.section-icon-gray {
+    background-color: #6c757d;
+}
+
+.section-icon-blue {
+    background-color: #2E5A88;
+}
+
+.section-icon-purple {
+    background-color: #6f42c1;
+}
+
+/* Small Icon Circle (40px) */
+.icon-circle-small {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+/* Medium Icon Circle (60px) */
+.icon-circle-medium {
+    width: 60px !important;
+    height: 60px !important;
+}
+
+/* Large Icon Circle (70px) */
+.icon-circle-large {
+    width: 70px !important;
+    height: 70px !important;
+}
+
+/* Small Icon for Cards (50px) */
+.icon-circle-sm {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+/* WhatsApp Button Styling */
+.whatsapp-floating {
+    background-color: #25D366 !important;
+    border: none !important;
+}
+
+/* Call Button Styling */
+.call-floating {
+    background-color: #2E5A88 !important;
+    border: none !important;
+}
+
+/* Quick Enroll Button Styling */
+.enroll-floating {
+    border: none !important;
+}
+
+/* WhatsApp Outline Button */
+.whatsapp-outline {
+    border-color: #25D366 !important;
+    color: #25D366 !important;
+}
+
+/* Footer Logo */
+.footer-logo {
+    background-color: black !important;
+}
+
+/* Course Card Clickable */
+.course-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hidden Elements */
+.hidden {
+    display: none;
+}
+
+/* Icon Box */
+.icon-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.icon-box-green {
+    background-color: #4CAF50;
+}
+
+.icon-box-orange {
+    background-color: #FF6B35;
+}
+
+.icon-box-gray {
+    background-color: #6c757d;
+}
+
+.icon-box-blue {
+    background-color: #2E5A88;
+}
+
+.icon-box-purple {
+    background-color: #6f42c1;
+}
+
+.icon-box-success {
+    background-color: #28a745;
+}
+
+.section-icon-success {
+    background-color: #28a745;
+}
