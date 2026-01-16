@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RootShield - Secure Your Tech Roots</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        :root {
+            --primary-blue: #2E5A88;
+            --primary-green: #4CAF50;
+            --primary-orange: #FF6B35;
+            --dark-gray: #333333;
+            --light-gray: #F8F9FA;
+        }
+        
+        .bg-primary-blue {
+            background-color: var(--primary-blue) !important;
+        }
+        
+        .text-primary-blue {
+            color: var(--primary-blue) !important;
+        }
+        
+        .btn-primary-blue {
+            background-color: var(--primary-blue);
+            border-color: var(--primary-blue);
+            color: white;
+        }
+        
+        .btn-primary-blue:hover {
+            background-color: #1e4470;
+            border-color: #1e4470;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top py-2">
+    <div class="container">
+        <!-- Logo with Image -->
+        <a class="navbar-brand" href="index.html">
+            <div class="d-flex align-items-center">
+                <!-- Your Logo Image -->
+                <img src="assets/images/logo.jpeg" 
+                     alt="RootShield Logo" 
+                     height="40" 
+                     class="d-inline-block align-top">
+                <!-- Text beside logo (optional) -->
+                <span class="ms-2 fw-bold fs-5 text-primary-blue">
+                    RootShield
+                </span>
+            </div>
+        </a>
+        
+        <!-- Rest of navigation code remains same -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Courses
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" onclick="enrollCourse('DSA Mastery')">DSA Mastery</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="enrollCourse('Web Development')">Web Development</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="enrollCourse('Cyber Security')">Cyber Security</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="privacypolicy.html">Privacy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="termsandconditions.html">Terms</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-5 mt-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">
+                        Secure Your <span class="text-primary-blue">Tech Roots</span>
+                    </h1>
+                    <p class="lead mb-4">
+                        Master Data Structures, Web Development & Cybersecurity from ground up. 
+                        Build strong foundations for your tech career.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#" class="btn btn-primary-blue btn-lg">
+                            <i class="bi bi-play-circle me-2"></i>Start Learning
+                        </a>
+                        <a href="aboutus.html" class="btn btn-outline-primary-blue btn-lg">
+                            <i class="bi bi-info-circle me-2"></i>Learn More
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <div class="d-flex align-items-center text-muted">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            <span>10,000+ Students Trained</span>
+                        </div>
+                        <div class="d-flex align-items-center text-muted mt-2">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            <span>Industry Expert Instructors</span>
+                        </div>
+                        <div class="d-flex align-items-center text-muted mt-2">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            <span>100% Placement Assistance</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-body p-4">
+                            <h5 class="card-title text-primary-blue">Featured Courses</h5>
+                            <div class="list-group list-group-flush">
+                                <div class="list-group-item border-0 py-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-primary-blue rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                            <i class="bi bi-code-slash text-white"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <h6 class="mb-0">DSA Mastery</h6>
+                                            <small class="text-muted">Master Algorithms & Data Structures</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item border-0 py-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-success rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                            <i class="bi bi-laptop text-white"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <h6 class="mb-0">Full Stack Web Dev</h6>
+                                            <small class="text-muted">Become a Full Stack Developer</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item border-0 py-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                            <i class="bi bi-shield-lock text-white"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <h6 class="mb-0">Cyber Security</h6>
+                                            <small class="text-muted">Become a Security Expert</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Popular Courses</h2>
+                <p class="text-muted">Choose from our carefully designed learning paths</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Course 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="bg-primary-blue rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <i class="bi bi-diagram-3 text-white fs-4"></i>
+                            </div>
+                            <h5 class="mt-3">Data Structures & Algorithms</h5>
+                            <p class="text-muted">Master fundamental DSA concepts with real-world problem solving.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check text-success me-2"></i>450+ Problems</li>
+                                <li><i class="bi bi-check text-success me-2"></i>Live Doubt Sessions</li>
+                                <li><i class="bi bi-check text-success me-2"></i>Interview Preparation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="bg-success rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <i class="bi bi-layers text-white fs-4"></i>
+                            </div>
+                            <h5 class="mt-3">Full Stack Development</h5>
+                            <p class="text-muted">Build complete web applications from frontend to backend.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check text-success me-2"></i>MERN Stack</li>
+                                <li><i class="bi bi-check text-success me-2"></i>5+ Real Projects</li>
+                                <li><i class="bi bi-check text-success me-2"></i>Deployment Guide</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="bg-warning rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <i class="bi bi-shield-check text-white fs-4"></i>
+                            </div>
+                            <h5 class="mt-3">Cyber Security Pro</h5>
+                            <p class="text-muted">Learn to protect systems and networks from digital attacks.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check text-success me-2"></i>Ethical Hacking</li>
+                                <li><i class="bi bi-check text-success me-2"></i>Network Security</li>
+                                <li><i class="bi bi-check text-success me-2"></i>Certification Prep</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- In your index.html file, find the Courses Section and replace with: -->
+
+<!-- Courses Section -->
+<section class="py-5 bg-light">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Our Popular Courses</h2>
+            <p class="text-muted">Click any course to enroll with Jeetu</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Course 1 - DSA Mastery -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm course-card" 
+                     style="cursor: pointer;"
+                     onclick="enrollCourse('DSA Mastery')">
+                    <div class="card-body p-4 text-center">
+                        <div class="bg-primary-blue rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                             style="width: 70px; height: 70px;">
+                            <i class="bi bi-diagram-3 text-white fs-3"></i>
+                        </div>
+                        <h5 class="mb-3">DSA Mastery</h5>
+                        <p class="text-muted mb-4">
+                            Master Data Structures & Algorithms with 450+ problems and interview prep.
+                        </p>
+                        <div class="course-features text-start mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <small>450+ Coding Problems</small>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <small>Live Doubt Sessions</small>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <small>Interview Preparation</small>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <span class="badge bg-warning text-dark mb-2">3-4 Months</span>
+                            <button class="btn btn-primary-blue w-100">
+                                <i class="bi bi-telephone me-2"></i>Enroll with us
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Course 2 - Web Development -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm course-card" 
+                     style="cursor: pointer;"
+                     onclick="enrollCourse('Full Stack Web Development')">
+                    <div class="card-body p-4 text-center">
+                        <div class="bg-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                             style="width: 70px; height: 70px;">
+                            <i class="bi bi-laptop text-white fs-3"></i>
+                        </div>
+                        <h5 class="mb-3">Full Stack Web Dev</h5>
+                        <p class="text-muted mb-4">
+                            Become a Full Stack Developer with MERN Stack and real projects.
+                        </p>
+                        <div class="course-features text-start mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <small>MERN Stack</small>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <small>5+ Real Projects</small>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <small>Deployment Guide</small>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <span class="badge bg-warning text-dark mb-2">4-5 Months</span>
+                            <button class="btn btn-primary-blue w-100">
+                                <i class="bi bi-telephone me-2"></i>Enroll with us
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Course 3 - Cyber Security -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm course-card" 
+                     style="cursor: pointer;"
+                     onclick="enrollCourse('Cyber Security Professional')">
+                    <div class="card-body p-4 text-center">
+                        <div class="bg-warning rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                             style="width: 70px; height: 70px;">
+                            <i class="bi bi-shield-check text-white fs-3"></i>
+                        </div>
+                        <h5 class="mb-3">Cyber Security Pro</h5>
+                        <p class="text-muted mb-4">
+                            Learn Ethical Hacking, Network Security, and protect systems from attacks.
+                        </p>
+                        <div class="course-features text-start mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <small>Ethical Hacking</small>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <small>Network Security</small>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <small>Certification Prep</small>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <span class="badge bg-warning text-dark mb-2">4-6 Months</span>
+                            <button class="btn btn-primary-blue w-100">
+                                <i class="bi bi-telephone me-2"></i>Enroll with us
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- View All Courses Button -->
+        <div class="text-center mt-5">
+            <a href="contact.html" class="btn btn-outline-primary-blue btn-lg">
+                <i class="bi bi-headset me-2"></i>Talk to us for All Courses
+            </a>
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <!-- Footer Logo -->
+                <div class="d-flex align-items-center mb-3">
+                    <img src="assets/images/logo.jpeg" 
+                         alt="RootShield Logo" 
+                         height="40" 
+                         class="me-2">
+                    <span class="fw-bold fs-5">
+                        Root<span class="text-white">Shield</span>
+                    </span>
+                </div>
+                <p class="text-light small mb-3">
+                    Building strong tech foundations through comprehensive training in DSA, 
+                    Web Development, and Cybersecurity.
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+            
+            <!-- Rest of footer code remains same -->
+            <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                    <li class="mb-2"><a href="aboutus.html" class="text-light text-decoration-none">About</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                <h5 class="mb-3">Legal</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="termsandconditions.html" class="text-light text-decoration-none">Terms</a></li>
+                    <li class="mb-2"><a href="privacypolicy.html" class="text-light text-decoration-none">Privacy</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-3 col-md-4">
+                <h5 class="mb-3">Contact</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="bi bi-envelope me-2"></i>
+                        <span class="small">info@rootshield.com</span>
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-telephone me-2"></i>
+                        <span class="small">+91 98765 43210</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <hr class="bg-light my-4">
+        
+        <div class="text-center">
+            <p class="mb-0 small">&copy; 2026 RootShield. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+
+    <!-- Floating Contact Buttons -->
+<div class="position-fixed bottom-0 end-0 m-3" style="z-index: 1050;">
+    <div class="d-flex flex-column gap-3">
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/918707734001?text=Hi%20RootShield,%20I%20want%20to%20enroll%20in%20RootShield%20course" 
+           target="_blank" 
+           class="btn btn-success rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+           style="width: 60px; height: 60px; background-color: #25D366; border: none;"
+           title="WhatsApp RootShield">
+            <i class="bi bi-whatsapp fs-4"></i>
+        </a>
+        
+        <!-- Call Button -->
+        <a href="tel:+918707734001" 
+           class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+           style="width: 60px; height: 60px; background-color: #2E5A88; border: none;"
+           title="Call RootShield">
+            <i class="bi bi-telephone fs-4"></i>
+        </a>
+        
+        <!-- Quick Enroll Button -->
+        <button class="btn btn-warning rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+                style="width: 60px; height: 60px; border: none;"
+                onclick="quickEnroll()"
+                title="Quick Enroll">
+            <i class="bi bi-pencil-square fs-4"></i>
+        </button>
+    </div>
+</div>
+
+<!-- Enrollment Modal -->
+<div class="modal fade" id="quickEnrollModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary-blue text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-telephone me-2"></i>Quick Enrollment
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center mb-4">
+                    <div class="bg-primary-blue rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                         style="width: 70px; height: 70px;">
+                        <i class="bi bi-headset text-white fs-3"></i>
+                    </div>
+                    <h5>Contact Jeetu for Enrollment</h5>
+                    <p class="text-muted">Our enrollment manager will guide you through the process</p>
+                </div>
+                
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="d-grid gap-2">
+                            <a href="tel:+918707734001" class="btn btn-success btn-lg">
+                                <i class="bi bi-telephone me-2"></i>Call Now: +91 8707734001
+                            </a>
+                            <a href="https://wa.me/918707734001" target="_blank" class="btn btn-outline-success btn-lg">
+                                <i class="bi bi-whatsapp me-2"></i>WhatsApp RootShield
+                            </a>
+                            <a href="contact.html" class="btn btn-primary-blue btn-lg">
+                                <i class="bi bi-pencil-square me-2"></i>Fill Enrollment Form
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info mt-4">
+                    <h6><i class="bi bi-info-circle me-2"></i>Our Working Hours</h6>
+                    <p class="mb-0 small">Mon-Sat: 10:00 AM - 7:00 PM IST<br>
+                    Sunday: 11:00 AM - 5:00 PM IST</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Function for course enrollment
+    function enrollCourse(courseName) {
+        // Store course in sessionStorage
+        sessionStorage.setItem('selectedCourse', courseName);
+        // Redirect to contact page
+        window.location.href = 'contact.html';
+    }
+    
+    // Function for quick enroll button
+    function quickEnroll() {
+        const modal = new bootstrap.Modal(document.getElementById('quickEnrollModal'));
+        modal.show();
+    }
+    
+    // Make all course cards clickable
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add click event to all course cards
+        document.querySelectorAll('.course-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (!e.target.closest('button')) {
+                    const courseName = this.querySelector('h5').textContent;
+                    enrollCourse(courseName);
+                }
+            });
+        });
+        
+        // Add hover effects to course cards
+        document.querySelectorAll('.course-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    });
+</script>
+</body>
+</html>

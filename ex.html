@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - RootShield</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --primary-blue: #2E5A88;
+            --primary-green: #4CAF50;
+        }
+        
+        .bg-primary-blue { background-color: var(--primary-blue); }
+        .text-primary-blue { color: var(--primary-blue); }
+        
+        .privacy-header {
+            background: linear-gradient(135deg, #2E5A88 0%, #4CAF50 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-top: 20px;
+        }
+        
+        .privacy-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--primary-blue);
+        }
+        
+        .data-table {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .consent-box {
+            background-color: #e8f4fd;
+            border: 2px dashed #2E5A88;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top py-2">
+    <div class="container">
+        <!-- Logo with Image -->
+        <a class="navbar-brand" href="index.html">
+            <div class="d-flex align-items-center">
+                <!-- Your Logo Image -->
+                <img src="assets/images/logo.jpeg" 
+                     alt="RootShield Logo" 
+                     height="40" 
+                     class="d-inline-block align-top">
+                <!-- Text beside logo (optional) -->
+                <span class="ms-2 fw-bold fs-5 text-primary-blue">
+                    RootShield
+                </span>
+            </div>
+        </a>
+        
+        <!-- Rest of navigation code remains same -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Courses
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" onclick="enrollCourse('DSA Mastery')">DSA Mastery</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="enrollCourse('Web Development')">Web Development</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="enrollCourse('Cyber Security')">Cyber Security</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="privacypolicy.html">Privacy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="termsandconditions.html">Terms</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Privacy Policy Header -->
+    <div class="container mt-5 pt-5">
+        <div class="privacy-header text-center">
+            <h1 class="display-5 fw-bold mb-3"><i class="bi bi-shield-check me-3"></i>Privacy Policy</h1>
+            <p class="lead">Your privacy is our priority. Learn how we protect your data.</p>
+            <p class="mb-0">Effective Date: January 15, 2024</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <!-- Introduction -->
+        <div class="privacy-section">
+            <div class="d-flex align-items-start mb-4">
+                <div class="icon-box bg-primary-blue text-white">
+                    <i class="bi bi-info-circle fs-4"></i>
+                </div>
+                <div>
+                    <h3 class="text-primary-blue mb-3">Introduction</h3>
+                    <p>At RootShield, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+                    <p>Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Information We Collect -->
+        <div class="privacy-section">
+            <div class="d-flex align-items-start mb-4">
+                <div class="icon-box text-white" style="background-color: #4CAF50;">
+                    <i class="bi bi-database fs-4"></i>
+                </div>
+                <div>
+                    <h3 class="text-primary-blue mb-3">Information We Collect</h3>
+                    <p>We collect several types of information for various purposes:</p>
+                    
+                    <div class="data-table mt-4">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Type of Data</th>
+                                    <th>Examples</th>
+                                    <th>Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Personal Data</strong></td>
+                                    <td>Name, Email, Phone, Address</td>
+                                    <td>Account creation, Communication</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Academic Data</strong></td>
+                                    <td>Education background, Skills</td>
+                                    <td>Personalized learning paths</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Technical Data</strong></td>
+                                    <td>IP Address, Browser type, Device info</td>
+                                    <td>Security, Analytics, Improvements</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Usage Data</strong></td>
+                                    <td>Course progress, Time spent, Quiz scores</td>
+                                    <td>Performance tracking, Improvements</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Payment Data</strong></td>
+                                    <td>Transaction history, Payment method</td>
+                                    <td>Processing payments, Records</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- How We Use Your Information -->
+        <div class="privacy-section">
+            <div class="d-flex align-items-start mb-4">
+                <div class="icon-box text-white" style="background-color: #FF6B35;">
+                    <i class="bi bi-gear fs-4"></i>
+                </div>
+                <div>
+                    <h3 class="text-primary-blue mb-3">How We Use Your Information</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5><i class="bi bi-person-check text-primary-blue me-2"></i>Service Delivery</h5>
+                                    <ul class="mb-0">
+                                        <li>Provide and maintain our Service</li>
+                                        <li>Process your transactions</li>
+                                        <li>Send course updates and notifications</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5><i class="bi bi-bar-chart text-primary-blue me-2"></i>Improvements</h5>
+                                    <ul class="mb-0">
+                                        <li>Personalize your learning experience</li>
+                                        <li>Analyze usage patterns</li>
+                                        <li>Improve course content</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5><i class="bi bi-shield-check text-primary-blue me-2"></i>Security</h5>
+                                    <ul class="mb-0">
+                                        <li>Monitor for fraudulent activity</li>
+                                        <li>Protect against unauthorized access</li>
+                                        <li>Ensure system security</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5><i class="bi bi-megaphone text-primary-blue me-2"></i>Communication</h5>
+                                    <ul class="mb-0">
+                                        <li>Send important updates</li>
+                                        <li>Respond to your queries</li>
+                                        <li>Provide customer support</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Sharing & Disclosure -->
+        <div class="privacy-section">
+            <div class="d-flex align-items-start mb-4">
+                <div class="icon-box text-white" style="background-color: #6c757d;">
+                    <i class="bi bi-share fs-4"></i>
+                </div>
+                <div>
+                    <h3 class="text-primary-blue mb-3">Data Sharing & Disclosure</h3>
+                    <p>We may share your information in the following situations:</p>
+                    
+                    <div class="accordion" id="sharingAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    <i class="bi bi-building me-2"></i>With Service Providers
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#sharingAccordion">
+                                <div class="accordion-body">
+                                    We may share your data with trusted third-party service providers who assist us in operating our website, conducting our business, or serving our users.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    <i class="bi bi-briefcase me-2"></i>For Business Transfers
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#sharingAccordion">
+                                <div class="accordion-body">
+                                    In connection with any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    <i class="bi bi-shield-exclamation me-2"></i>For Legal Reasons
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#sharingAccordion">
+                                <div class="accordion-body">
+                                    To comply with applicable laws and regulations, to respond to a subpoena, search warrant or other lawful request for information we receive.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-warning mt-3">
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        <strong>Note:</strong> We do NOT sell your personal information to third parties.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Your Data Protection Rights -->
+        <div class="privacy-section">
+            <div class="d-flex align-items-start mb-4">
+                <div class="icon-box text-white" style="background-color: #2E5A88;">
+                    <i class="bi bi-lock fs-4"></i>
+                </div>
+                <div>
+                    <h3 class="text-primary-blue mb-3">Your Data Protection Rights</h3>
+                    <p>You have the following data protection rights:</p>
+                    
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-eye text-primary-blue fs-1 mb-3"></i>
+                                    <h5>Right to Access</h5>
+                                    <p class="small mb-0">You can request copies of your personal data.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-pencil-square text-primary-blue fs-1 mb-3"></i>
+                                    <h5>Right to Rectification</h5>
+                                    <p class="small mb-0">You can request correction of inaccurate data.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-trash text-primary-blue fs-1 mb-3"></i>
+                                    <h5>Right to Erasure</h5>
+                                    <p class="small mb-0">You can request deletion of your personal data.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-download text-primary-blue fs-1 mb-3"></i>
+                                    <h5>Right to Data Portability</h5>
+                                    <p class="small mb-0">You can request transfer of your data to another organization.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <p>To exercise these rights, please contact us at <strong>privacy@rootshield.com</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cookies Policy -->
+        <div class="privacy-section">
+            <div class="d-flex align-items-start mb-4">
+                <div class="icon-box text-white" style="background-color: #FF6B35;">
+                    <i class="bi bi-cookie fs-4"></i>
+                </div>
+                <div>
+                    <h3 class="text-primary-blue mb-3">Cookies Policy</h3>
+                    <p>We use cookies and similar tracking technologies to track activity on our Service.</p>
+                    
+                    <div class="consent-box text-center">
+                        <h5><i class="bi bi-cookie me-2"></i>Cookie Consent</h5>
+                        <p>By using our website, you consent to our use of cookies in accordance with this Privacy Policy.</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <button class="btn btn-success" onclick="acceptCookies()">
+                                <i class="bi bi-check-circle me-2"></i>Accept All Cookies
+                            </button>
+                            <button class="btn btn-outline-primary" onclick="manageCookies()">
+                                <i class="bi bi-gear me-2"></i>Manage Preferences
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="table-responsive mt-3">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Cookie Type</th>
+                                    <th>Purpose</th>
+                                    <th>Duration</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Essential Cookies</td>
+                                    <td>Website functionality, security</td>
+                                    <td>Session</td>
+                                </tr>
+                                <tr>
+                                    <td>Analytics Cookies</td>
+                                    <td>Understand user behavior</td>
+                                    <td>2 years</td>
+                                </tr>
+                                <tr>
+                                    <td>Preference Cookies</td>
+                                    <td>Remember your settings</td>
+                                    <td>1 year</td>
+                                </tr>
+                                <tr>
+                                    <td>Advertising Cookies</td>
+                                    <td>Show relevant ads</td>
+                                    <td>1 year</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security Measures -->
+        <div class="privacy-section">
+            <div class="d-flex align-items-start mb-4">
+                <div class="icon-box text-white" style="background-color: #28a745;">
+                    <i class="bi bi-shield-lock fs-4"></i>
+                </div>
+                <div>
+                    <h3 class="text-primary-blue mb-3">Security Measures</h3>
+                    <p>We implement appropriate security measures to protect your personal information:</p>
+                    
+                    <div class="row text-center">
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="border rounded p-3">
+                                <i class="bi bi-encryption text-primary-blue fs-2 mb-2"></i>
+                                <h6>SSL Encryption</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="border rounded p-3">
+                                <i class="bi bi-fire text-primary-blue fs-2 mb-2"></i>
+                                <h6>Firewall Protection</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="border rounded p-3">
+                                <i class="bi bi-key text-primary-blue fs-2 mb-2"></i>
+                                <h6>Access Controls</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="border rounded p-3">
+                                <i class="bi bi-cloud-arrow-up text-primary-blue fs-2 mb-2"></i>
+                                <h6>Regular Backups</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="privacy-section">
+            <div class="d-flex align-items-start mb-4">
+                <div class="icon-box text-white" style="background-color: #6f42c1;">
+                    <i class="bi bi-headset fs-4"></i>
+                </div>
+                <div>
+                    <h3 class="text-primary-blue mb-3">Contact Us</h3>
+                    <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                    
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-envelope text-primary-blue fs-1 mb-3"></i>
+                                    <h5>Email</h5>
+                                    <p class="mb-0">privacy@rootshield.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-telephone text-primary-blue fs-1 mb-3"></i>
+                                    <h5>Phone</h5>
+                                    <p class="mb-0">+91 00000000</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-clock text-primary-blue fs-1 mb-3"></i>
+                                    <h5>Response Time</h5>
+                                    <p class="mb-0">Within 48 hours</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="text-center my-5">
+            <div class="btn-group" role="group">
+                <a href="index.html" class="btn btn-primary btn-lg">
+                    <i class="bi bi-house me-2"></i>Back to Home
+                </a>
+                <a href="termsandconditions.html" class="btn btn-outline-primary btn-lg">
+                    <i class="bi bi-file-text me-2"></i>View Terms & Conditions
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <!-- Footer Logo -->
+                <div class="d-flex align-items-center mb-3">
+                    <img src="assets/images/logo.jpeg" 
+                         alt="RootShield Logo" 
+                         height="40" 
+                         class="me-2">
+                    <span class="fw-bold fs-5">
+                        Root<span class="text-white">Shield</span>
+                    </span>
+                </div>
+                <p class="text-light small mb-3">
+                    Building strong tech foundations through comprehensive training in DSA, 
+                    Web Development, and Cybersecurity.
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+            
+            <!-- Rest of footer code remains same -->
+            <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                    <li class="mb-2"><a href="aboutus.html" class="text-light text-decoration-none">About</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                <h5 class="mb-3">Legal</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="termsandconditions.html" class="text-light text-decoration-none">Terms</a></li>
+                    <li class="mb-2"><a href="privacypolicy.html" class="text-light text-decoration-none">Privacy</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-3 col-md-4">
+                <h5 class="mb-3">Contact</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="bi bi-envelope me-2"></i>
+                        <span class="small">info@rootshield.com</span>
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-telephone me-2"></i>
+                        <span class="small">+91 98765 43210</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <hr class="bg-light my-4">
+        
+        <div class="text-center">
+            <p class="mb-0 small">&copy; 2026 RootShield. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Cookie functions
+        function acceptCookies() {
+            alert('Thank you for accepting cookies. Your preference has been saved.');
+            // In real implementation, this would set a cookie
+        }
+        
+        function manageCookies() {
+            alert('Cookie management panel would open here in a real implementation.');
+        }
+        
+        // GDPR compliance message
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if cookie consent already given
+            if(!localStorage.getItem('cookieConsent')) {
+                setTimeout(function() {
+                    const consentBox = document.createElement('div');
+                    consentBox.className = 'fixed-bottom p-3 bg-dark text-white';
+                    consentBox.innerHTML = `
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <p class="mb-0">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+                                </div>
+                                <div class="col-md-4 text-end">
+                                    <button class="btn btn-primary btn-sm me-2" onclick="acceptCookiesPopup()">Accept</button>
+                                    <button class="btn btn-outline-light btn-sm" onclick="closePopup()">Decline</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    document.body.appendChild(consentBox);
+                }, 2000);
+            }
+        });
+        
+        function acceptCookiesPopup() {
+            localStorage.setItem('cookieConsent', 'true');
+            document.querySelector('.fixed-bottom').remove();
+            alert('Thank you! Cookies accepted.');
+        }
+        
+        function closePopup() {
+            document.querySelector('.fixed-bottom').remove();
+        }
+    </script>
+
+        <!-- Floating Contact Buttons -->
+<div class="position-fixed bottom-0 end-0 m-3" style="z-index: 1050;">
+    <div class="d-flex flex-column gap-3">
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/918707734001?text=Hi%20RootShield,%20I%20want%20to%20enroll%20in%20RootShield%20course" 
+           target="_blank" 
+           class="btn btn-success rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+           style="width: 60px; height: 60px; background-color: #25D366; border: none;"
+           title="WhatsApp RootShield">
+            <i class="bi bi-whatsapp fs-4"></i>
+        </a>
+        
+        <!-- Call Button -->
+        <a href="tel:+918707734001" 
+           class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+           style="width: 60px; height: 60px; background-color: #2E5A88; border: none;"
+           title="Call RootShield">
+            <i class="bi bi-telephone fs-4"></i>
+        </a>
+        
+        <!-- Quick Enroll Button -->
+        <button class="btn btn-warning rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+                style="width: 60px; height: 60px; border: none;"
+                onclick="quickEnroll()"
+                title="Quick Enroll">
+            <i class="bi bi-pencil-square fs-4"></i>
+        </button>
+    </div>
+</div>
+
+<!-- Enrollment Modal -->
+<div class="modal fade" id="quickEnrollModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary-blue text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-telephone me-2"></i>Quick Enrollment
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center mb-4">
+                    <div class="bg-primary-blue rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                         style="width: 70px; height: 70px;">
+                        <i class="bi bi-headset text-white fs-3"></i>
+                    </div>
+                    <h5>Contact Jeetu for Enrollment</h5>
+                    <p class="text-muted">Our enrollment manager will guide you through the process</p>
+                </div>
+                
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="d-grid gap-2">
+                            <a href="tel:+918707734001" class="btn btn-success btn-lg">
+                                <i class="bi bi-telephone me-2"></i>Call Now: +91 8707734001
+                            </a>
+                            <a href="https://wa.me/918707734001" target="_blank" class="btn btn-outline-success btn-lg">
+                                <i class="bi bi-whatsapp me-2"></i>WhatsApp RootShield
+                            </a>
+                            <a href="contact.html" class="btn btn-primary-blue btn-lg">
+                                <i class="bi bi-pencil-square me-2"></i>Fill Enrollment Form
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info mt-4">
+                    <h6><i class="bi bi-info-circle me-2"></i>Our Working Hours</h6>
+                    <p class="mb-0 small">Mon-Sat: 10:00 AM - 7:00 PM IST<br>
+                    Sunday: 11:00 AM - 5:00 PM IST</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Function for course enrollment
+    function enrollCourse(courseName) {
+        // Store course in sessionStorage
+        sessionStorage.setItem('selectedCourse', courseName);
+        // Redirect to contact page
+        window.location.href = 'contact.html';
+    }
+    
+    // Function for quick enroll button
+    function quickEnroll() {
+        const modal = new bootstrap.Modal(document.getElementById('quickEnrollModal'));
+        modal.show();
+    }
+    
+    // Make all course cards clickable
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add click event to all course cards
+        document.querySelectorAll('.course-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (!e.target.closest('button')) {
+                    const courseName = this.querySelector('h5').textContent;
+                    enrollCourse(courseName);
+                }
+            });
+        });
+        
+        // Add hover effects to course cards
+        document.querySelectorAll('.course-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    });
+</script>
+</body>
+</html>

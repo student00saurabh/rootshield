@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - RootShield</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --primary-blue: #2E5A88;
+            --primary-green: #4CAF50;
+            --primary-orange: #FF6B35;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 70px;
+            background-color: #f8f9fa;
+        }
+        
+        .text-primary-blue { color: var(--primary-blue); }
+        .bg-primary-blue { background-color: var(--primary-blue); }
+        .btn-primary-blue {
+            background-color: var(--primary-blue);
+            border-color: var(--primary-blue);
+            color: white;
+        }
+        .btn-primary-blue:hover {
+            background-color: #1e4470;
+            border-color: #1e4470;
+        }
+        
+        .contact-hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #3a6da8 100%);
+            color: white;
+            border-radius: 0 0 30px 30px;
+            padding: 60px 0;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        
+        .course-badge {
+            background: var(--primary-orange);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+        
+        .contact-method {
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            height: 100%;
+            background: white;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .contact-method:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 0.2rem rgba(46, 90, 136, 0.25);
+        }
+        
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            color: white;
+        }
+        
+        .call-btn {
+            background: var(--primary-green);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+        }
+        
+        .call-btn:hover {
+            background: #388E3C;
+            color: white;
+        }
+        
+        .enrollment-steps {
+            counter-reset: step;
+            padding-left: 0;
+        }
+        
+        .enrollment-steps li {
+            list-style: none;
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 30px;
+        }
+        
+        .enrollment-steps li::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .course-highlight {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            border-left: 5px solid var(--primary-orange);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top py-2">
+    <div class="container">
+        <!-- Logo with Image -->
+        <a class="navbar-brand" href="index.html">
+            <div class="d-flex align-items-center">
+                <!-- Your Logo Image -->
+                <img src="assets/images/logo.jpeg" 
+                     alt="RootShield Logo" 
+                     height="40" 
+                     class="d-inline-block align-top">
+                <!-- Text beside logo (optional) -->
+                <span class="ms-2 fw-bold fs-5 text-primary-blue">
+                    RootShield
+                </span>
+            </div>
+        </a>
+        
+        <!-- Rest of navigation code remains same -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Courses
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" onclick="enrollCourse('DSA Mastery')">DSA Mastery</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="enrollCourse('Web Development')">Web Development</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="enrollCourse('Cyber Security')">Cyber Security</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="privacypolicy.html">Privacy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="termsandconditions.html">Terms</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section with Course Info -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold mb-3">Enroll in Your Dream Course</h1>
+                    <p class="lead mb-4" id="courseTitle">
+                        Get expert guidance and start your learning journey today
+                    </p>
+                    <div id="selectedCourse" style="display: none;">
+                        <span class="course-badge mb-3" id="courseBadge">
+                            Selected Course
+                        </span>
+                        <h4 id="courseNameDisplay" class="mb-3"></h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="bg-white text-dark rounded-3 p-4 d-inline-block">
+                        <h5 class="mb-2"><i class="bi bi-headset text-primary-blue me-2"></i>Need Help?</h5>
+                        <p class="mb-2">Call our enrollment advisor</p>
+                        <h4 class="fw-bold text-primary-blue">+91 8707734001</h4>
+                        <small class="text-muted">Enrollment Manager</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row g-4">
+            <!-- Left Column - Contact Methods -->
+            <div class="col-lg-4">
+                <div class="contact-card p-4 mb-4">
+                    <h3 class="mb-4 text-primary-blue">Contact us Directly</h3>
+                    
+                    <div class="mb-4">
+                        <div class="contact-method mb-4">
+                            <div class="contact-icon">
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <h5>WhatsApp</h5>
+                            <p class="text-muted small mb-3">Instant response for course queries</p>
+                            <a href="https://wa.me/918707734001?text=Hi%20RootShield,%20I%20want%20to%20enroll%20in%20course" 
+                               target="_blank" class="whatsapp-btn w-100">
+                                <i class="bi bi-whatsapp me-2"></i>Message on WhatsApp
+                            </a>
+                        </div>
+                        
+                        <div class="contact-method mb-4">
+                            <div class="contact-icon">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                            <h5>Direct Call</h5>
+                            <p class="text-muted small mb-3">Mon-Sat: 10 AM - 7 PM IST</p>
+                            <a href="tel:+918707734001" class="call-btn w-100">
+                                <i class="bi bi-telephone me-2"></i>Call us Now
+                            </a>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <h5>Email</h5>
+                            <p class="text-muted small mb-2">For detailed inquiries</p>
+                            <p class="fw-bold mb-0">support@rootshield.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <h6><i class="bi bi-info-circle me-2"></i>Availability</h6>
+                        <p class="small mb-0">Monday to Saturday: 10:00 AM - 7:00 PM IST<br>
+                        Sunday: 11:00 AM - 5:00 PM IST</p>
+                    </div>
+                </div>
+                
+                <!-- Course Highlights -->
+                <div class="contact-card p-4">
+                    <h4 class="mb-3 text-primary-blue">Why Enroll With Us?</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Free Demo Class Available</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Flexible Payment Options</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>EMI Options Available</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Certificate of Completion</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Lifetime Access to Materials</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Right Column - Enrollment Form -->
+            <div class="col-lg-8">
+                <div class="contact-card p-4">
+                    <h3 class="mb-4 text-primary-blue">Enrollment Form</h3>
+                    <p class="text-muted mb-4">Fill this form and We will contact you within 30-60 minutes</p>
+                    
+                    <form id="enrollmentForm">
+                        <!-- Hidden Course Field -->
+                        <input type="hidden" id="courseName" name="courseName">
+                        
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="fullName" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="fullName" required 
+                                       placeholder="Enter your full name">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" required 
+                                       placeholder="Enter your email">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" id="phone" required 
+                                       placeholder="Enter 10-digit mobile number">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="course" class="form-label">Select Course *</label>
+                                <select class="form-select" id="course" required>
+                                    <option value="">Choose a course</option>
+                                    <option value="DSA Mastery">DSA Mastery (Data Structures & Algorithms)</option>
+                                    <option value="Web Development">Full Stack Web Development</option>
+                                    <option value="Cyber Security">Cyber Security Professional</option>
+                                    <option value="MERN Stack">MERN Stack Development</option>
+                                    <option value="Python Django">Python Django Development</option>
+                                    <option value="Machine Learning">Machine Learning & AI</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="qualification" class="form-label">Highest Qualification</label>
+                                <input type="text" class="form-control" id="qualification" 
+                                       placeholder="e.g., B.Tech, BCA, MCA, etc.">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="experience" class="form-label">Experience Level</label>
+                                <select class="form-select" id="experience">
+                                    <option value="">Select your level</option>
+                                    <option value="Beginner">Beginner (0-1 year)</option>
+                                    <option value="Intermediate">Intermediate (1-3 years)</option>
+                                    <option value="Advanced">Advanced (3+ years)</option>
+                                    <option value="Student">Student</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Additional Information</label>
+                                <textarea class="form-control" id="message" rows="3" 
+                                          placeholder="Tell us about your expectations, questions, or specific requirements..."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="terms" required>
+                                    <label class="form-check-label" for="terms">
+                                        I agree to receive communication from RootShield regarding course details and updates
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary-blue btn-lg w-100 py-3">
+                                    <i class="bi bi-send me-2"></i>Submit Enrollment Request
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <!-- Quick Action Buttons -->
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-3">
+                            <a href="tel:+918707734001" class="btn btn-outline-success w-100 py-3">
+                                <i class="bi bi-telephone me-2"></i>Call Now: +91 8707734001
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <a href="https://wa.me/918707734001?text=Hi%20RootShield,%20I%20want%20to%20discuss%20course%20enrollment" 
+                               target="_blank" class="btn btn-outline-success w-100 py-3" style="border-color: #25D366; color: #25D366;">
+                                <i class="bi bi-whatsapp me-2"></i>WhatsApp Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enrollment Process -->
+                <div class="contact-card p-4 mt-4">
+                    <h4 class="mb-4 text-primary-blue">How Enrollment Works</h4>
+                    <ol class="enrollment-steps">
+                        <li>
+                            <h5>Submit Your Details</h5>
+                            <p class="text-muted mb-0">Fill the form above or contact us directly</p>
+                        </li>
+                        <li>
+                            <h5>Free Counseling Session</h5>
+                            <p class="text-muted mb-0">We will contact you for a free career counseling session</p>
+                        </li>
+                        <li>
+                            <h5>Demo Class</h5>
+                            <p class="text-muted mb-0">Attend a free demo class to experience our teaching style</p>
+                        </li>
+                        <li>
+                            <h5>Admission & Payment</h5>
+                            <p class="text-muted mb-0">Complete admission formalities and choose payment plan</p>
+                        </li>
+                        <li>
+                            <h5>Start Learning</h5>
+                            <p class="text-muted mb-0">Begin your journey with access to all course materials</p>
+                        </li>
+                    </ol>
+                </div>
+                
+                <!-- Course Details -->
+                <div class="course-highlight mt-4">
+                    <h5><i class="bi bi-info-circle text-primary-blue me-2"></i>Course Information</h5>
+                    <div class="row mt-3">
+                        <div class="col-md-4">
+                            <p class="mb-1"><strong>Duration:</strong> 3-6 months</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="mb-1"><strong>Mode:</strong> Online Live Classes</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="mb-1"><strong>Certification:</strong> Yes</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="mb-1"><strong>Demo:</strong> Free Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <!-- Footer Logo -->
+                <div class="d-flex align-items-center mb-3">
+                    <img src="assets/images/logo.jpeg" 
+                         alt="RootShield Logo" 
+                         height="40" 
+                         class="me-2">
+                    <span class="fw-bold fs-5">
+                        Root<span class="text-white">Shield</span>
+                    </span>
+                </div>
+                <p class="text-light small mb-3">
+                    Building strong tech foundations through comprehensive training in DSA, 
+                    Web Development, and Cybersecurity.
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+            
+            <!-- Rest of footer code remains same -->
+            <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                    <li class="mb-2"><a href="aboutus.html" class="text-light text-decoration-none">About</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                <h5 class="mb-3">Legal</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="termsandconditions.html" class="text-light text-decoration-none">Terms</a></li>
+                    <li class="mb-2"><a href="privacypolicy.html" class="text-light text-decoration-none">Privacy</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-3 col-md-4">
+                <h5 class="mb-3">Contact</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="bi bi-envelope me-2"></i>
+                        <span class="small">info@rootshield.com</span>
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-telephone me-2"></i>
+                        <span class="small">+91 98765 43210</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <hr class="bg-light my-4">
+        
+        <div class="text-center">
+            <p class="mb-0 small">&copy; 2026 RootShield. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Function to handle course enrollment from other pages
+        function enrollCourse(courseName) {
+            // Store course in localStorage
+            localStorage.setItem('selectedCourse', courseName);
+            // Redirect to contact page
+            window.location.href = 'contact.html';
+        }
+        
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+        
+        // When page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for course from URL parameter
+            const urlCourse = getUrlParameter('course');
+            
+            // Check for course from localStorage
+            const storedCourse = localStorage.getItem('selectedCourse');
+            
+            // Check for course from sessionStorage (for current session)
+            const sessionCourse = sessionStorage.getItem('selectedCourse');
+            
+            // Priority: URL param > localStorage > sessionStorage
+            let selectedCourse = urlCourse || storedCourse || sessionCourse;
+            
+            if (selectedCourse) {
+                // Show course selection
+                document.getElementById('selectedCourse').style.display = 'block';
+                document.getElementById('courseNameDisplay').textContent = selectedCourse;
+                document.getElementById('courseBadge').textContent = 'Selected: ' + selectedCourse;
+                
+                // Update page title
+                document.getElementById('courseTitle').textContent = 'Enroll in ' + selectedCourse + ' Course';
+                
+                // Set in form
+                document.getElementById('courseName').value = selectedCourse;
+                document.getElementById('course').value = selectedCourse;
+                
+                // Clear storage after use
+                localStorage.removeItem('selectedCourse');
+                sessionStorage.removeItem('selectedCourse');
+            }
+            
+            // Update all course links to use enrollCourse function
+            document.querySelectorAll('a[href*="course"]').forEach(link => {
+                if (link.textContent.includes('DSA') || link.textContent.includes('Web') || link.textContent.includes('Cyber')) {
+                    link.onclick = function(e) {
+                        e.preventDefault();
+                        const course = this.textContent;
+                        sessionStorage.setItem('selectedCourse', course);
+                        window.location.href = 'contact.html';
+                    };
+                }
+            });
+            
+            // Handle form submission
+            document.getElementById('enrollmentForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = {
+                    name: document.getElementById('fullName').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    course: document.getElementById('course').value,
+                    qualification: document.getElementById('qualification').value,
+                    experience: document.getElementById('experience').value,
+                    batch: document.getElementById('batchPreference').value,
+                    message: document.getElementById('message').value
+                };
+                
+                // Validate phone number
+                const phoneRegex = /^[0-9]{10}$/;
+                if (!phoneRegex.test(formData.phone.replace(/\D/g, ''))) {
+                    alert('Please enter a valid 10-digit phone number');
+                    return;
+                }
+                
+                // Create WhatsApp message
+                const whatsappMessage = `New Enrollment Request:%0A%0A` +
+                    `Name: ${formData.name}%0A` +
+                    `Phone: ${formData.phone}%0A` +
+                    `Email: ${formData.email}%0A` +
+                    `Course: ${formData.course}%0A` +
+                    `Qualification: ${formData.qualification}%0A` +
+                    `Experience: ${formData.experience}%0A` +
+                    `Batch Preference: ${formData.batch}%0A` +
+                    `Message: ${formData.message}`;
+                
+                // Open WhatsApp with pre-filled message
+                const whatsappUrl = `https://wa.me/918707734001?text=${whatsappMessage}`;
+                
+                // Show success message
+                alert('Thank you! Your enrollment request has been submitted. We will contact you within 30 minutes.');
+                
+                // Open WhatsApp
+                window.open(whatsappUrl, '_blank');
+                
+                // Reset form
+                this.reset();
+            });
+            
+            // Auto-fill phone input for better UX
+            document.getElementById('phone').addEventListener('input', function(e) {
+                let value = this.value.replace(/\D/g, '');
+                if (value.length > 10) value = value.substring(0, 10);
+                this.value = value;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - RootShield</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --primary-blue: #2E5A88;
+            --primary-green: #4CAF50;
+            --primary-orange: #FF6B35;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            padding-top: 70px;
+        }
+        
+        .text-primary-blue { color: var(--primary-blue); }
+        .bg-primary-blue { background-color: var(--primary-blue); }
+        .btn-primary-blue {
+            background-color: var(--primary-blue);
+            border-color: var(--primary-blue);
+            color: white;
+        }
+        .btn-primary-blue:hover {
+            background-color: #1e4470;
+            border-color: #1e4470;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .hero-about {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 0 0 40px 40px;
+        }
+        
+        .stats-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .stats-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+        
+        .mission-card, .vision-card {
+            padding: 40px;
+            border-radius: 20px;
+            height: 100%;
+        }
+        
+        .mission-card {
+            background: linear-gradient(135deg, #2E5A88 0%, #3a6da8 100%);
+            color: white;
+        }
+        
+        .vision-card {
+            background: linear-gradient(135deg, #4CAF50 0%, #66bb6a 100%);
+            color: white;
+        }
+        
+        .values-icon {
+            width: 70px;
+            height: 70px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+        }
+        
+        .team-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .team-img {
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .why-item {
+            padding: 25px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary-blue);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 3px solid var(--primary-blue);
+            border-radius: 50%;
+        }
+        
+        h1, h2, h3, h4 {
+            font-weight: 600;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-blue);
+            border-radius: 2px;
+        }
+        
+        .contact-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top py-2">
+    <div class="container">
+        <!-- Logo with Image -->
+        <a class="navbar-brand" href="index.html">
+            <div class="d-flex align-items-center">
+                <!-- Your Logo Image -->
+                <img src="assets/images/logo.jpeg" 
+                     alt="RootShield Logo" 
+                     height="40" 
+                     class="d-inline-block align-top">
+                <!-- Text beside logo (optional) -->
+                <span class="ms-2 fw-bold fs-5 text-primary-blue">
+                    RootShield
+                </span>
+            </div>
+        </a>
+        
+        <!-- Rest of navigation code remains same -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Courses
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" onclick="enrollCourse('DSA Mastery')">DSA Mastery</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="enrollCourse('Web Development')">Web Development</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="enrollCourse('Cyber Security')">Cyber Security</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="privacypolicy.html">Privacy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="termsandconditions.html">Terms</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero-about section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold mb-4">About RootShield</h1>
+                    <p class="lead mb-4">
+                        We're building India's most trusted platform for technical skill development, 
+                        focusing on strong foundations in DSA, Web Development, and Cybersecurity.
+                    </p>
+                    <p class="mb-4">
+                        Since 2020, we've trained over 10,000 students and helped them secure 
+                        positions in top tech companies. Our mission is to make quality tech 
+                        education accessible to everyone.
+                    </p>
+                    <a href="#mission" class="btn btn-primary-blue px-4">
+                        <i class="bi bi-arrow-down me-2"></i>Learn More
+                    </a>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Team collaboration" class="img-fluid rounded-3">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Values -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Our Core Values</h2>
+            <p class="text-center text-muted mb-5">The principles that guide everything we do</p>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="values-icon">
+                            <i class="bi bi-mortarboard"></i>
+                        </div>
+                        <h4 class="mb-3">Excellence</h4>
+                        <p class="text-muted">We are committed to delivering the highest quality education.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="values-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <h4 class="mb-3">Student Success</h4>
+                        <p class="text-muted">Every decision is guided by what's best for our students.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="values-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h4 class="mb-3">Integrity</h4>
+                        <p class="text-muted">We build relationships based on honesty and transparency.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="values-icon">
+                            <i class="bi bi-lightbulb"></i>
+                        </div>
+                        <h4 class="mb-3">Innovation</h4>
+                        <p class="text-muted">We constantly innovate our teaching methodologies.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="values-icon">
+                            <i class="bi bi-globe"></i>
+                        </div>
+                        <h4 class="mb-3">Accessibility</h4>
+                        <p class="text-muted">Quality education should be accessible to everyone.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="values-icon">
+                            <i class="bi bi-heart"></i>
+                        </div>
+                        <h4 class="mb-3">Community</h4>
+                        <p class="text-muted">We foster a supportive learning community.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center">Meet Our Team</h2>
+            <p class="text-center text-muted mb-5">Industry experts guiding your learning journey</p>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="img-fluid team-img" alt="Rajesh Kumar">
+                        <div class="p-4">
+                            <h5 class="mb-1">Rajesh Kumar</h5>
+                            <p class="text-primary-blue mb-2">Founder & CEO</p>
+                            <p class="small text-muted mb-0">
+                                Ex-Google, 12+ years experience in software development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="img-fluid team-img" alt="Priya Sharma">
+                        <div class="p-4">
+                            <h5 class="mb-1">Priya Sharma</h5>
+                            <p class="text-primary-blue mb-2">CTO</p>
+                            <p class="small text-muted mb-0">
+                                Full Stack Developer with 8+ years experience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="img-fluid team-img" alt="Amit Singh">
+                        <div class="p-4">
+                            <h5 class="mb-1">Amit Singh</h5>
+                            <p class="text-primary-blue mb-2">Head of Cybersecurity</p>
+                            <p class="small text-muted mb-0">
+                                Certified Ethical Hacker, 10+ years experience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             class="img-fluid team-img" alt="Neha Gupta">
+                        <div class="p-4">
+                            <h5 class="mb-1">Neha Gupta</h5>
+                            <p class="text-primary-blue mb-2">Head of Career Services</p>
+                            <p class="small text-muted mb-0">
+                                HR Specialist, placed 5000+ students.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Why Choose Us -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Why Choose RootShield?</h2>
+            <p class="text-center text-muted mb-5">What makes us different</p>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="why-item">
+                        <div class="bg-primary-blue rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                             style="width: 50px; height: 50px;">
+                            <i class="bi bi-laptop text-white"></i>
+                        </div>
+                        <h5 class="mb-3">Industry-Relevant Curriculum</h5>
+                        <p class="text-muted mb-0">Courses updated regularly to match current industry requirements.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="why-item">
+                        <div class="bg-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                             style="width: 50px; height: 50px;">
+                            <i class="bi bi-person-video text-white"></i>
+                        </div>
+                        <h5 class="mb-3">Live Mentorship</h5>
+                        <p class="text-muted mb-0">Personalized guidance from industry experts.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="why-item">
+                        <div class="bg-warning rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                             style="width: 50px; height: 50px;">
+                            <i class="bi bi-briefcase text-white"></i>
+                        </div>
+                        <h5 class="mb-3">Placement Assistance</h5>
+                        <p class="text-muted mb-0">Dedicated career support and job referrals.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="why-item">
+                        <div class="bg-info rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                             style="width: 50px; height: 50px;">
+                            <i class="bi bi-clock-history text-white"></i>
+                        </div>
+                        <h5 class="mb-3">Lifetime Access</h5>
+                        <p class="text-muted mb-0">Access course materials and updates forever.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="why-item">
+                        <div class="bg-purple rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                             style="width: 50px; height: 50px; background-color: #6f42c1;">
+                            <i class="bi bi-code-square text-white"></i>
+                        </div>
+                        <h5 class="mb-3">Hands-on Projects</h5>
+                        <p class="text-muted mb-0">Build real-world projects for your portfolio.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="why-item">
+                        <div class="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                             style="width: 50px; height: 50px;">
+                            <i class="bi bi-award text-white"></i>
+                        </div>
+                        <h5 class="mb-3">Industry Recognition</h5>
+                        <p class="text-muted mb-0">Certificates recognized by top tech companies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="contact-box">
+                <h2 class="section-title mb-4">Get in Touch</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <h5><i class="bi bi-geo-alt text-primary-blue me-2"></i>Our Office</h5>
+                        <p class="text-muted mb-0">
+                           Greater Noida, Uttar Pradesh 201309<br>
+                            India
+                        </p>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <h5><i class="bi bi-envelope text-primary-blue me-2"></i>Email Us</h5>
+                        <p class="text-muted mb-0">
+                            info@rootshield.com<br>
+                            support@rootshield.com
+                        </p>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <h5><i class="bi bi-telephone text-primary-blue me-2"></i>Call Us</h5>
+                        <p class="text-muted mb-0">
+                            +91 0000000000<br>
+                            Mon-Sat: 9:00 AM - 6:00 PM IST
+                        </p>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <h5><i class="bi bi-clock text-primary-blue me-2"></i>Response Time</h5>
+                        <p class="text-muted mb-0">
+                            Email: Within 24 hours<br>
+                            Phone: Immediate during business hours
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <!-- Footer Logo -->
+                <div class="d-flex align-items-center mb-3">
+                    <img src="assets/images/logo.jpeg" 
+                         alt="RootShield Logo" 
+                         height="40" 
+                         class="me-2">
+                    <span class="fw-bold fs-5">
+                        Root<span class="text-white">Shield</span>
+                    </span>
+                </div>
+                <p class="text-light small mb-3">
+                    Building strong tech foundations through comprehensive training in DSA, 
+                    Web Development, and Cybersecurity.
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+            
+            <!-- Rest of footer code remains same -->
+            <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                    <li class="mb-2"><a href="aboutus.html" class="text-light text-decoration-none">About</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                <h5 class="mb-3">Legal</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="termsandconditions.html" class="text-light text-decoration-none">Terms</a></li>
+                    <li class="mb-2"><a href="privacypolicy.html" class="text-light text-decoration-none">Privacy</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-3 col-md-4">
+                <h5 class="mb-3">Contact</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="bi bi-envelope me-2"></i>
+                        <span class="small">info@rootshield.com</span>
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-telephone me-2"></i>
+                        <span class="small">+91 98765 43210</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <hr class="bg-light my-4">
+        
+        <div class="text-center">
+            <p class="mb-0 small">&copy; 2026 RootShield. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Simple counter animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const counters = document.querySelectorAll('.stats-number');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent);
+                let current = 0;
+                const increment = target / 50;
+                
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.ceil(current) + (counter.textContent.includes('K') ? 'K+' : '+');
+                        setTimeout(updateCounter, 30);
+                    } else {
+                        counter.textContent = target + (counter.textContent.includes('K') ? 'K+' : '+');
+                    }
+                };
+                
+                // Start counter when element is in viewport
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCounter();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(counter);
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+
+        <!-- Floating Contact Buttons -->
+<div class="position-fixed bottom-0 end-0 m-3" style="z-index: 1050;">
+    <div class="d-flex flex-column gap-3">
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/918707734001?text=Hi%20RootShield,%20I%20want%20to%20enroll%20in%20RootShield%20course" 
+           target="_blank" 
+           class="btn btn-success rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+           style="width: 60px; height: 60px; background-color: #25D366; border: none;"
+           title="WhatsApp RootShield">
+            <i class="bi bi-whatsapp fs-4"></i>
+        </a>
+        
+        <!-- Call Button -->
+        <a href="tel:+918707734001" 
+           class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+           style="width: 60px; height: 60px; background-color: #2E5A88; border: none;"
+           title="Call RootShield">
+            <i class="bi bi-telephone fs-4"></i>
+        </a>
+        
+        <!-- Quick Enroll Button -->
+        <button class="btn btn-warning rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+                style="width: 60px; height: 60px; border: none;"
+                onclick="quickEnroll()"
+                title="Quick Enroll">
+            <i class="bi bi-pencil-square fs-4"></i>
+        </button>
+    </div>
+</div>
+
+<!-- Enrollment Modal -->
+<div class="modal fade" id="quickEnrollModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary-blue text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-telephone me-2"></i>Quick Enrollment
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center mb-4">
+                    <div class="bg-primary-blue rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                         style="width: 70px; height: 70px;">
+                        <i class="bi bi-headset text-white fs-3"></i>
+                    </div>
+                    <h5>Contact Jeetu for Enrollment</h5>
+                    <p class="text-muted">Our enrollment manager will guide you through the process</p>
+                </div>
+                
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="d-grid gap-2">
+                            <a href="tel:+918707734001" class="btn btn-success btn-lg">
+                                <i class="bi bi-telephone me-2"></i>Call Now: +91 8707734001
+                            </a>
+                            <a href="https://wa.me/918707734001" target="_blank" class="btn btn-outline-success btn-lg">
+                                <i class="bi bi-whatsapp me-2"></i>WhatsApp RootShield
+                            </a>
+                            <a href="contact.html" class="btn btn-primary-blue btn-lg">
+                                <i class="bi bi-pencil-square me-2"></i>Fill Enrollment Form
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info mt-4">
+                    <h6><i class="bi bi-info-circle me-2"></i>Our Working Hours</h6>
+                    <p class="mb-0 small">Mon-Sat: 10:00 AM - 7:00 PM IST<br>
+                    Sunday: 11:00 AM - 5:00 PM IST</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Function for course enrollment
+    function enrollCourse(courseName) {
+        // Store course in sessionStorage
+        sessionStorage.setItem('selectedCourse', courseName);
+        // Redirect to contact page
+        window.location.href = 'contact.html';
+    }
+    
+    // Function for quick enroll button
+    function quickEnroll() {
+        const modal = new bootstrap.Modal(document.getElementById('quickEnrollModal'));
+        modal.show();
+    }
+    
+    // Make all course cards clickable
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add click event to all course cards
+        document.querySelectorAll('.course-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (!e.target.closest('button')) {
+                    const courseName = this.querySelector('h5').textContent;
+                    enrollCourse(courseName);
+                }
+            });
+        });
+        
+        // Add hover effects to course cards
+        document.querySelectorAll('.course-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    });
+</script>
+</body>
+</html>
