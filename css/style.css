@@ -152,16 +152,16 @@ footer a:hover {
 /* Floating Contact Buttons Container */
 .floating-contact-container {
     position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 12px;
+    bottom: 20px;
+    right: 20px;
     z-index: 1050;
 }
 
 .floating-contact-buttons {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 15px;
+    align-items: center;
 }
 
 /* Section Icon Variants */
@@ -286,4 +286,73 @@ footer a:hover {
 
 .section-icon-success {
     background-color: #28a745;
+}
+
+/* Enhanced Floating Contact Buttons */
+.floating-contact-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+
+.floating-contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.floating-contact-buttons .icon-circle-medium {
+    transition: all 0.3s ease;
+    transform: scale(1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.floating-contact-buttons .icon-circle-medium:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Floating Button Specific Colors */
+.whatsapp-floating {
+    background-color: #25D366 !important;
+    border: none !important;
+    color: white !important;
+}
+
+.whatsapp-floating:hover {
+    background-color: #128C7E !important;
+}
+
+.call-floating {
+    background-color: #2E5A88 !important;
+    border: none !important;
+    color: white !important;
+}
+
+.call-floating:hover {
+    background-color: #1e4470 !important;
+}
+
+.enroll-floating {
+    background-color: #FFC107 !important;
+    border: none !important;
+    color: #333 !important;
+}
+
+.enroll-floating:hover {
+    background-color: #E0A800 !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+    .floating-contact-container {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .floating-contact-buttons {
+        gap: 12px;
+    }
 }
